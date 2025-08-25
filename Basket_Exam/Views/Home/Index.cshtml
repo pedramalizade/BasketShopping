@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "صفحه اصلی";
+}
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img class="card-img-top img-fluid" src="/Images/@item.ImageName" alt="@item.Title" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">@item.Title</h5>
+                    <p class="text-success fw-bold">@item.Price.ToString("#,0 تومان")</p>
+                    <p>تعداد = @item.Count</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-success w-100" asp-controller="Orders" asp-action="AddToCart" asp-route-id="@item.ProductId">افزودن به سبد خرید</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

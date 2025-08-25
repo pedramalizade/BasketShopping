@@ -1,0 +1,25 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "خطا";
+}
+
+<h1 class="text-danger">خطا</h1>
+<h2 class="text-danger">هنگام پردازش درخواست شما خطایی رخ داده است.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>شناسه درخواست:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>حالت توسعه (Development Mode)</h3>
+<p>
+    اگر محیط برنامه را به <strong>Development</strong> تغییر دهید، جزئیات بیشتری از خطا نمایش داده می‌شود.
+</p>
+<p>
+    <strong>توجه:</strong> فعال کردن حالت <strong>Development</strong> در محیط انتشار (Production) توصیه نمی‌شود،
+    زیرا ممکن است اطلاعات حساس خطا را برای کاربران نمایش دهد.
+    برای اشکال‌زدایی محلی، متغیر محیطی <strong>ASPNETCORE_ENVIRONMENT</strong> را روی <strong>Development</strong> قرار دهید
+    و برنامه را مجدداً اجرا کنید.
+</p>
