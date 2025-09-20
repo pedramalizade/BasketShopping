@@ -1,5 +1,7 @@
 ﻿using Basket_Exam.Data;
 using Basket_Exam.Jobs;
+using Domain.Interfaces.Repository;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Quartz;
@@ -17,7 +19,7 @@ builder.Services.AddDbContext<MyContext>(options =>
 {
 options.UseSqlServer(connectionString);
 });
-
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddSingleton<IJobFactory, SingletonJobFactory>();
 builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
 builder.Services.AddSingleton<RemoveCartJob>();
