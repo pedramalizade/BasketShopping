@@ -1,9 +1,4 @@
-﻿using Basket_Exam.Data;
-using Basket_Exam.Models.ViewModels;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-
-namespace Basket_Exam.Components
+﻿namespace Basket_Exam.Components
 {
     public class CartComponents : ViewComponent
     {

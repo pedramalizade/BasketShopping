@@ -1,6 +1,4 @@
-﻿using Basket_Exam.Models.ViewModels;
-
-namespace Domain.Interfaces.Repository
+﻿namespace Domain.Interfaces.Repository
 {
     public interface IOrderRepository
     {

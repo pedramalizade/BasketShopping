@@ -1,7 +1,4 @@
-﻿using Basket_Exam.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace Basket_Exam.Data
+﻿namespace Basket_Exam.Data
 {
     public class MyContext : DbContext
     {

@@ -1,10 +1,4 @@
-﻿using Domain.Interfaces.Repository;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-using ZarinpalSandbox;
-
-namespace Basket_Exam.Controllers
+﻿namespace Basket_Exam.Controllers
 {
     [Authorize]
     public class OrdersController : Controller

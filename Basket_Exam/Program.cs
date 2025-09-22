@@ -1,14 +1,4 @@
-﻿using Basket_Exam.Data;
-using Basket_Exam.Jobs;
-using Domain.Interfaces.Repository;
-using Infrastructure.Repositories;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Quartz;
-using Quartz.Impl;
-using Quartz.Spi;
-
-var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");

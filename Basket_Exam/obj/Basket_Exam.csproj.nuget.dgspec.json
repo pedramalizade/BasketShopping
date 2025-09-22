@@ -228,6 +228,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "ZarinpalSandbox": {
               "target": "Package",
               "version": "[2.0.4, )"

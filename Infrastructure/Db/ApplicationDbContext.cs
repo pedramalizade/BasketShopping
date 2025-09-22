@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
-namespace Basket_Exam.Data
+﻿namespace Basket_Exam.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

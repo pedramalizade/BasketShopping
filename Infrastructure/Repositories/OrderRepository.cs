@@ -1,12 +1,4 @@
-﻿using Basket_Exam.Data;
-using Basket_Exam.Models;
-using Basket_Exam.Models.ViewModels;
-using Domain.Interfaces.Repository;
-using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
-using ZarinpalSandbox;
-
-namespace Infrastructure.Repositories
+﻿namespace Infrastructure.Repositories
 {
     public class OrderRepository : IOrderRepository
     {

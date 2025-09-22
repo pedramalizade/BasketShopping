@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Basket_Exam.Migrations
+namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class initMyTbl : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

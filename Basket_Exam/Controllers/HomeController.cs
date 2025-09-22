@@ -1,9 +1,3 @@
-using System.Diagnostics;
-using Basket_Exam.Data;
-using Basket_Exam.Models;
-using Microsoft.AspNetCore.Mvc;
-using ZarinpalSandbox;
-
 namespace Basket_Exam.Controllers
 {
     public class HomeController : Controller

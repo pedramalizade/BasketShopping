@@ -3937,6 +3937,7 @@
         "dependencies": {
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "ZarinpalSandbox": "2.0.4"
         },
         "compile": {

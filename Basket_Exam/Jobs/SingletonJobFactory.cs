@@ -1,7 +1,4 @@
-﻿using Quartz;
-using Quartz.Spi;
-
-namespace Basket_Exam.Jobs
+﻿namespace Basket_Exam.Jobs
 {
     public class SingletonJobFactory : IJobFactory
     {

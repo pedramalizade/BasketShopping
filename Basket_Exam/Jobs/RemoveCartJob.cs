@@ -1,8 +1,4 @@
-﻿using Basket_Exam.Data;
-using Microsoft.EntityFrameworkCore;
-using Quartz;
-
-namespace Basket_Exam.Jobs
+﻿namespace Basket_Exam.Jobs
 {
     [DisallowConcurrentExecution]
     public class RemoveCartJob : IJob

@@ -1,0 +1,16 @@
+﻿global using Basket_Exam.Data;
+global using Basket_Exam.Jobs;
+global using Domain.Interfaces.Repository;
+global using Infrastructure.Repositories;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.EntityFrameworkCore;
+global using Quartz;
+global using Quartz.Impl;
+global using Quartz.Spi;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using System.Security.Claims;
+global using System.Diagnostics;
+global using Basket_Exam.Models;
+global using ZarinpalSandbox;
+global using Basket_Exam.Models.ViewModels;

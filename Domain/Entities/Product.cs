@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Basket_Exam.Models
+﻿namespace Basket_Exam.Models
 {
     public class Product
     {
