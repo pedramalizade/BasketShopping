@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Basket_Exam")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88ea6b02268bcd1278ca177b2511942c735b3f22")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b82a8dc925ba22cb8c6ef4b2e22b39659ecdfb4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Basket_Exam")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Basket_Exam")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

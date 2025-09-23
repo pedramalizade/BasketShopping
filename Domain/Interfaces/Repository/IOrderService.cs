@@ -1,6 +1,6 @@
 ﻿namespace Domain.Interfaces.Repository
 {
-    public interface IOrderRepository
+    public interface IOrderService
     {
         Task AddToCart(int productId, string userId);
         Task<List<ShowOrderViewModel>> GetUserOrderAsync(string userId);

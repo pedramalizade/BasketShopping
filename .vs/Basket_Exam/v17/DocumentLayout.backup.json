@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\asus\\source\\repos\\Basket_Exam\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F991D67F-FB35-4049-A68F-D71593D0E642}|Basket_Exam\\Basket_Exam.csproj|c:\\users\\asus\\source\\repos\\basket_exam\\basket_exam\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F991D67F-FB35-4049-A68F-D71593D0E642}|Basket_Exam\\Basket_Exam.csproj|solutionrelative:basket_exam\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F991D67F-FB35-4049-A68F-D71593D0E642}|Basket_Exam\\Basket_Exam.csproj|c:\\users\\asus\\source\\repos\\basket_exam\\basket_exam\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F991D67F-FB35-4049-A68F-D71593D0E642}|Basket_Exam\\Basket_Exam.csproj|solutionrelative:basket_exam\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 747,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\Basket_Exam\\Basket_Exam\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Basket_Exam\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\Basket_Exam\\Basket_Exam\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Basket_Exam\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T17:06:28.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\Basket_Exam\\Basket_Exam\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Basket_Exam\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\Basket_Exam\\Basket_Exam\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Basket_Exam\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T17:05:16.82Z",
+              "EditorCaption": ""
             }
           ]
         }

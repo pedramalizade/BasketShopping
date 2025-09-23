@@ -3,17 +3,17 @@
     [Authorize]
     public class OrdersController : Controller
     {
-        private readonly IOrderRepository _orderRepository;
-        public OrdersController(IOrderRepository orderRepository)
+        private readonly IOrderService _orderService;
+        public OrdersController(IOrderService orderService)
         {
-            _orderRepository = orderRepository;
+            _orderService = orderService;
         }
 
         public async Task<IActionResult> AddToCart(int id)
         {
             string currentUserID = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            await _orderRepository.AddToCart(id, currentUserID);
+            await _orderService.AddToCart(id, currentUserID);
 
             return Redirect("/");
         }
@@ -22,7 +22,7 @@
         {
             string currentUserID = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var orderList = await _orderRepository.GetUserOrderAsync(currentUserID);
+            var orderList = await _orderService.GetUserOrderAsync(currentUserID);
 
             return View(orderList);
         }
@@ -30,19 +30,19 @@
 
         public async Task<IActionResult> Delete(int id)
         {
-            await _orderRepository.DeleteOrderDetailAsync(id);
+            await _orderService.DeleteOrderDetailAsync(id);
             return RedirectToAction("ShowOrder");
         }
 
         public async Task<IActionResult> Command(int id, string command)
         {
-            await _orderRepository.UpdateOrderDetailCommandAsync(id, command);
+            await _orderService.UpdateOrderDetailCommandAsync(id, command);
             return RedirectToAction("ShowOrder");
         }
         [HttpPost]
         public async Task<IActionResult> UpdateSumOrder(int orderId)
         {
-            await _orderRepository.UpdateSumOrder(orderId);
+            await _orderService.UpdateSumOrder(orderId);
 
             return RedirectToAction("ShowOrder");
         }
@@ -51,7 +51,7 @@
         {
             string currentUserID = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var redirectUrl = await _orderRepository.PaymentRequestAsync(currentUserID);
+            var redirectUrl = await _orderService.PaymentRequestAsync(currentUserID);
 
             if (redirectUrl == null)
             {

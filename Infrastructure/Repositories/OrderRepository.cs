@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.Repositories
 {
-    public class OrderRepository : IOrderRepository
+    public class OrderRepository : IOrderService
     {
         private readonly MyContext _context;
         public OrderRepository(MyContext context)
@@ -9,7 +9,6 @@
         }
         public async Task AddToCart(int productId, string userId)
         {
-            // پیدا کردن یا ساخت سفارش جدید
             var order = await _context.Orders
                 .SingleOrDefaultAsync(o => o.UserId == userId && !o.IsFinally);
 

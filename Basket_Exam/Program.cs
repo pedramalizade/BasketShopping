@@ -9,7 +9,7 @@ builder.Services.AddDbContext<MyContext>(options =>
 {
 options.UseSqlServer(connectionString);
 });
-builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderService, OrderRepository>();
 builder.Services.AddSingleton<IJobFactory, SingletonJobFactory>();
 builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
 builder.Services.AddSingleton<RemoveCartJob>();
