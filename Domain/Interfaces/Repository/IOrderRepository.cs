@@ -1,6 +1,6 @@
-﻿namespace Domain.Interfaces.Service
+﻿namespace Domain.Interfaces.Repository
 {
-    public interface IOrderService
+    public interface IOrderRepository
     {
         /// <summary>
         /// افزودن محصول به سبد خرید کاربر. 

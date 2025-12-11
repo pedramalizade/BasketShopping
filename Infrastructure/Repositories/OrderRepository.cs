@@ -1,12 +1,20 @@
 ﻿namespace Infrastructure.Repositories
 {
-    public class OrderRepository : IOrderService
+    public class OrderRepository : IOrderRepository
     {
         private readonly MyContext _context;
         public OrderRepository(MyContext context)
         {
             _context = context;
         }
+
+        /// <summary>
+        /// افزودن محصول به سبد خرید کاربر. 
+        /// اگر سفارشی باز وجود نداشته باشد، ایجاد می‌شود.
+        /// در صورت وجود، تعداد محصول افزایش یا رکورد جدید اضافه می‌شود.
+        /// </summary>
+        /// <param name="productId">شناسه محصول</param>
+        /// <param name="userId">شناسه کاربر</param>
         public async Task AddToCart(int productId, string userId)
         {
             var order = await _context.Orders
@@ -62,6 +70,10 @@
             await UpdateSumOrder(order.OrderId);
         }
 
+        /// <summary>
+        /// حذف یک آیتم از جزئیات سفارش و به‌روزرسانی مجموع کل.
+        /// </summary>
+        /// <param name="orderDetailId">شناسه جزئیات سفارش</param>
         public async Task DeleteOrderDetailAsync(int orderDetailId)
         {
             var orderDetail = await _context.OrderDetails.FindAsync(orderDetailId);
@@ -74,6 +86,12 @@
             }
         }
 
+        /// <summary>
+        /// تغییر تعداد یک آیتم در سفارش بر اساس دستور (افزایش یا کاهش).
+        /// اگر تعداد به صفر برسد، آیتم حذف می‌شود.
+        /// </summary>
+        /// <param name="orderDetailId">شناسه جزئیات سفارش</param>
+        /// <param name="command">دستور: "up" یا "down"</param>
         public async Task UpdateOrderDetailCommandAsync(int orderDetailId, string command)
         {
             var orderDetail = await _context.OrderDetails.FindAsync(orderDetailId);
@@ -105,6 +123,12 @@
             await UpdateSumOrder(orderDetail.OrderId);
         }
 
+        /// <summary>
+        /// ایجاد درخواست پرداخت برای سفارش باز کاربر.
+        /// در صورت موفقیت، لینک پرداخت بازگردانده می‌شود.
+        /// </summary>
+        /// <param name="userId">شناسه کاربر</param>
+        /// <returns>لینک پرداخت یا null</returns>
         public async Task<string?> PaymentRequestAsync(string userId)
         {
             var order = await _context.Orders
@@ -127,6 +151,12 @@
             return null; 
         }
 
+        /// <summary>
+        /// دریافت لیست آیتم‌های سبد خرید کاربر.
+        /// اگر سفارشی باز وجود نداشته باشد، لیست خالی برمی‌گردد.
+        /// </summary>
+        /// <param name="userId">شناسه کاربر</param>
+        /// <returns>لیست آیتم‌های سفارش</returns>
         public async Task<List<ShowOrderViewModel>> GetUserOrderAsync(string userId)
         {
             var order = await _context.Orders
@@ -153,6 +183,10 @@
             return await query.ToListAsync();
         }
 
+        /// <summary>
+        /// محاسبه و به‌روزرسانی مجموع مبلغ سفارش بر اساس جزئیات آن.
+        /// </summary>
+        /// <param name="orderId">شناسه سفارش</param>
         public async Task UpdateSumOrder(int orderId)
         {
             var order = await _context.Orders.FindAsync(orderId);
