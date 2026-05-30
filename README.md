@@ -1,9 +1,5 @@
 
----
 
-# 🛒 2. BasketShopping README
-
-```md id="bs2"
 # BasketShopping - E-Commerce Basket Management System
 
 BasketShopping is a backend-focused e-commerce basket management system built with **.NET 9.0** and Clean Architecture principles.
@@ -67,8 +63,6 @@ The project is built using **Clean Architecture**:
 - Entity Framework Core
 - SQL Server
 - JWT Authentication
-
----
 
 ## 📌 Purpose
 
