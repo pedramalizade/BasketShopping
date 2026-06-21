@@ -45,9 +45,7 @@ The project is built using **Clean Architecture**:
 
 - ⚡ **Scalable Design**
   - Designed for extension into full e-commerce system
-
 ---
-
 ## 🧠 Design Concepts
 
 - Clean Architecture
