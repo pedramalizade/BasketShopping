@@ -24,9 +24,7 @@ The project is built using **Clean Architecture**:
 - Application Layer: Business workflows and use cases
 - Infrastructure Layer: Data persistence and external integrations
 - API Layer: RESTful endpoints
-
 ---
-
 ## ✨ Key Features
 
 - 🛒 **Basket Management**
