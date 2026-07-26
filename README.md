@@ -15,9 +15,7 @@ This system provides a scalable and modular backend for managing user shopping b
 It is designed to reflect production-level backend design patterns.
 
 ---
-
 ## 🏗️ Architecture
-
 The project is built using **Clean Architecture**:
 
 - Domain Layer: Business rules and entities
